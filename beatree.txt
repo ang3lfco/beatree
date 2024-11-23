@@ -1,0 +1,83 @@
+use beatree
+
+db.usuarios.insertOne({
+    _id: ObjectId(),
+    nombre: "Angel Sanchez",
+    email: "angelsn03@gmail.com",
+    contrasenia: "Wweo-2003",
+    imagen: "url_de_imagen_opcional"
+});
+
+db.artistas.insertOne({
+    _id: ObjectId(),
+    tipo: "banda",
+    nombre: "La Máquina de Hacer Pájaros",
+    imagen: "url_imagen_banda",
+    genero: "Rock Progresivo",
+    integrantes: [
+        {
+            _id: ObjectId(),
+            nombres: "Carlos Alberto",
+            apellidos: "García",
+            rol: "Vocalista y Tecladista",
+            fechaIngreso: ISODate("1982-01-01"),
+            estadoActividad: true  
+        },
+        {
+            _id: ObjectId(),
+            nombres: "Rodrigo",
+            apellidos: "Páez",
+            rol: "Tecladista y Compositor",
+            fechaIngreso: ISODate("1982-01-01"),
+            estadoActividad: true  
+        },
+        {
+            _id: ObjectId(),
+            nombres: "Omar",
+            apellidos: "Chaves",
+            rol: "Bajista",
+            fechaIngreso: ISODate("1982-01-01"),
+            fechaSalida: ISODate("1983-12-31"),  
+            estadoActividad: false  
+        }
+    ]
+});
+
+
+db.albumes.insertOne({
+    _id: ObjectId(),
+    nombre: "Películas",
+    fechaLanzamiento: ISODate("1982-01-01"),  
+    generoMusical: "Rock Progresivo",
+    portada: "url_imagen_portada_peliculas", 
+    canciones: [
+        {
+            _id: ObjectId(),
+            titulo: "El Anillo del Capitán Beto",
+            duracion: "6:45", 
+            archivo: "el_anillo_del_capitan_beto.mp3"  
+        },
+        {
+            _id: ObjectId(),
+            titulo: "La Colina de la Vida",
+            duracion: "5:00",
+            archivo: "la_colina_de_la_vida.mp3"
+        },
+        {
+            _id: ObjectId(),
+            titulo: "La Máquina de Hacer Pájaros",
+            duracion: "4:30",
+            archivo: "la_maquina_de_hacer_pajaros.mp3"
+        },
+        {
+            _id: ObjectId(),
+            titulo: "Cuentos de la Resistencia",
+            duracion: "3:50",
+            archivo: "cuentos_de_la_resistencia.mp3"
+        }
+    ],
+    artista: ObjectId("id_del_artista_la_maquina_de_hacer_pajaros") 
+});
+
+
+show collections
