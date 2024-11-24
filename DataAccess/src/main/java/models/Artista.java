@@ -1,5 +1,6 @@
 package models;
 
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -28,7 +29,7 @@ public class Artista {
         this.integrantes = integrantes;
     }
 
-    public Artista(String nombre, String tipo, String imagenPath, String genero, <any> integrantes) {
+    public Artista(String nombre, String tipo, String imagenPath, String genero, List<Integrante> integrantes) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.imagenPath = imagenPath;
