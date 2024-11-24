@@ -22,7 +22,7 @@ public class IntegranteDAO implements IIntegranteDAO{
         this.collection = database.getCollection("canciones");
     }
     @Override
-    public void InsertarIntegrante(Integrante integrante) {
+    public void Insertar(Integrante integrante) {
         Document integranteDoc = new Document(
                 "_id", integrante.getId())
                 .append("nombre", integrante.getNombre())
