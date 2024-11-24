@@ -23,7 +23,7 @@ public class CancionDAO implements ICancionDAO{
     }
     
     @Override
-    public void Insertar(Cancion cancion) {
+    public void insertar(Cancion cancion) {
         Document cancionDoc = new Document("_id", cancion.getId())
                 .append("titulo", cancion.getTitulo())
                 .append("duracion", cancion.getDuracion());

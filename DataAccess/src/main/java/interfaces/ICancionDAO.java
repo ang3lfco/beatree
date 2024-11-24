@@ -14,5 +14,5 @@ import models.Integrante;
  */
 public interface ICancionDAO {
     
-    void Insertar(Cancion cancion);
+    void insertar(Cancion cancion);
 }

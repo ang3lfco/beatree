@@ -12,5 +12,5 @@ import models.Integrante;
  * @author pausa
  */
 public interface IIntegranteDAO {
-    void Insertar(Integrante integrante);
+    void insertar(Integrante integrante);
 }
