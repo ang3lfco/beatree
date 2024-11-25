@@ -1,4 +1,3 @@
-
 package models;
 
 /**
@@ -6,9 +5,10 @@ package models;
  * @author angelsn
  */
 import java.util.Date;
+import java.util.Objects;
 
 public class Integrante {
-    private String id; 
+    private String id;
     private String nombre;
     private String apellido;
     private String rol;
@@ -93,5 +93,30 @@ public class Integrante {
         this.estadoActivo = estadoActivo;
     }
 
-    
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 59 * hash + Objects.hashCode(this.id);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Integrante other = (Integrante) obj;
+        return Objects.equals(this.id, other.id);
+    }
+
+    @Override
+    public String toString() {
+        return "Integrante{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", rol=" + rol + ", fechaIngreso=" + fechaIngreso + ", fechaSalida=" + fechaSalida + ", estadoActivo=" + estadoActivo + '}';
+    }
 }

@@ -1,5 +1,6 @@
 package models;
 
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -28,15 +29,13 @@ public class Artista {
         this.integrantes = integrantes;
     }
 
-    public Artista(String nombre, String tipo, String imagenPath, String genero, <any> integrantes) {
+    public Artista(String nombre, String tipo, String imagenPath, String genero, List<Integrante> integrantes) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.imagenPath = imagenPath;
         this.genero = genero;
         this.integrantes = integrantes;
     }
-
-    
     
     public String getId() {
         return id;
@@ -89,12 +88,7 @@ public class Artista {
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 79 * hash + Objects.hashCode(this.id);
-        hash = 79 * hash + Objects.hashCode(this.nombre);
-        hash = 79 * hash + Objects.hashCode(this.tipo);
-        hash = 79 * hash + Objects.hashCode(this.imagenPath);
-        hash = 79 * hash + Objects.hashCode(this.genero);
-        hash = 79 * hash + Objects.hashCode(this.integrantes);
+        hash = 97 * hash + Objects.hashCode(this.id);
         return hash;
     }
 
@@ -110,22 +104,7 @@ public class Artista {
             return false;
         }
         final Artista other = (Artista) obj;
-        if (!Objects.equals(this.id, other.id)) {
-            return false;
-        }
-        if (!Objects.equals(this.nombre, other.nombre)) {
-            return false;
-        }
-        if (!Objects.equals(this.tipo, other.tipo)) {
-            return false;
-        }
-        if (!Objects.equals(this.imagenPath, other.imagenPath)) {
-            return false;
-        }
-        if (!Objects.equals(this.genero, other.genero)) {
-            return false;
-        }
-        return Objects.equals(this.integrantes, other.integrantes);
+        return Objects.equals(this.id, other.id);
     }
 
     @Override
@@ -134,6 +113,4 @@ public class Artista {
                 tipo + ", imagenPath=" + imagenPath + ", genero=" + genero + 
                 ", integrantes=" + integrantes + '}';
     }
-    
-    
 }

@@ -33,8 +33,6 @@ public class Usuario {
         this.imagenPath = imagenPath;
     }
     
-    
-
     public String getId() {
         return id;
     }
@@ -86,12 +84,7 @@ public class Usuario {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 41 * hash + Objects.hashCode(this.id);
-        hash = 41 * hash + Objects.hashCode(this.nombre);
-        hash = 41 * hash + Objects.hashCode(this.apellido);
-        hash = 41 * hash + Objects.hashCode(this.correo);
-        hash = 41 * hash + Objects.hashCode(this.contraseña);
-        hash = 41 * hash + Objects.hashCode(this.imagenPath);
+        hash = 89 * hash + Objects.hashCode(this.id);
         return hash;
     }
 
@@ -107,28 +100,11 @@ public class Usuario {
             return false;
         }
         final Usuario other = (Usuario) obj;
-        if (!Objects.equals(this.id, other.id)) {
-            return false;
-        }
-        if (!Objects.equals(this.nombre, other.nombre)) {
-            return false;
-        }
-        if (!Objects.equals(this.apellido, other.apellido)) {
-            return false;
-        }
-        if (!Objects.equals(this.correo, other.correo)) {
-            return false;
-        }
-        if (!Objects.equals(this.contraseña, other.contraseña)) {
-            return false;
-        }
-        return Objects.equals(this.imagenPath, other.imagenPath);
+        return Objects.equals(this.id, other.id);
     }
 
     @Override
     public String toString() {
-        return "Usuario{" + "id=" + id + ", nombre=" + nombre + ", apellido=" +
-                apellido + ", correo=" + correo + ", contrase\u00f1a=" + 
-                contraseña + ", imagenPath=" + imagenPath + '}';
+        return "Usuario{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", contrase\u00f1a=" + contraseña + ", imagenPath=" + imagenPath + '}';
     }
 }
