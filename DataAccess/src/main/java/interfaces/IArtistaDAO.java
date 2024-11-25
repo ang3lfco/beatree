@@ -7,5 +7,5 @@ import models.Artista;
  * @author Kevin
  */
 public interface IArtistaDAO {
-    void insertat(Artista artista);
+    void insertar(Artista artista);
 }

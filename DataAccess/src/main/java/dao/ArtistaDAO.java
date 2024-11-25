@@ -16,8 +16,8 @@ public class ArtistaDAO implements IArtistaDAO{
         this.collection = database.getCollection("artistas");
     }
     
-    
-    public void insertat(Artista artista) {
+    @Override
+    public void insertar(Artista artista) {
             Document artistaDoc = new Document("_id", artista.getId())
                 .append("nombre", artista.getNombre())
                 .append("tipo", artista.getTipo())
