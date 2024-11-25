@@ -57,24 +57,16 @@ db.albumes.insertOne({
     portadaPath: "url_imagen_portada_peliculas", 
     canciones: [
         {
-            _id: ObjectId(),
-            titulo: "El Anillo del Capitán Beto",
-            duracion: "6:45" 
+            titulo: "El Anillo del Capitán Beto"
         },
         {
-            _id: ObjectId(),
-            titulo: "La Colina de la Vida",
-            duracion: "5:00"
+            titulo: "La Colina de la Vida"
         },
         {
-            _id: ObjectId(),
-            titulo: "La Máquina de Hacer Pájaros",
-            duracion: "4:30"
+            titulo: "La Máquina de Hacer Pájaros"
         },
         {
-            _id: ObjectId(),
-            titulo: "Cuentos de la Resistencia",
-            duracion: "3:50"
+            titulo: "Cuentos de la Resistencia"
         }
     ],
     artista: ObjectId("id_del_artista")
