@@ -21,7 +21,6 @@ db.artistas.insertOne({
     genero: "Rock Progresivo",
     integrantes: [
         {
-            _id: ObjectId(),
             nombre: "Carlos Alberto",
             apellido: "García",
             rol: "Vocalista y Tecladista",
@@ -29,7 +28,6 @@ db.artistas.insertOne({
             estadoActivo: true  
         },
         {
-            _id: ObjectId(),
             nombre: "Rodrigo",
             apellido: "Páez",
             rol: "Tecladista y Compositor",
@@ -37,7 +35,6 @@ db.artistas.insertOne({
             estadoActivo: true  
         },
         {
-            _id: ObjectId(),
             nombre: "Omar",
             apellido: "Chaves",
             rol: "Bajista",
